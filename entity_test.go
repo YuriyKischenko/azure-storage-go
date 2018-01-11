@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/satori/uuid"
+	"github.com/satori/go.uuid"
 	chk "gopkg.in/check.v1"
 )
 
