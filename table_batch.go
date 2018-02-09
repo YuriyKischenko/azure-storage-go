@@ -117,14 +117,22 @@ func (t *TableBatch) MergeEntity(entity *Entity) {
 // the changesets.
 // As per document https://docs.microsoft.com/en-us/rest/api/storageservices/fileservices/performing-entity-group-transactions
 func (t *TableBatch) ExecuteBatch() error {
-	changesetBoundary := fmt.Sprintf("changeset_%s", uuid.NewV1())
+	uUID, err := uuid.NewV1()
+	if err != nil {
+		return err
+	}
+	changesetBoundary := fmt.Sprintf("changeset_%s", uUID)
 	uri := t.Table.tsc.client.getEndpoint(tableServiceName, "$batch", nil)
 	changesetBody, err := t.generateChangesetBody(changesetBoundary)
 	if err != nil {
 		return err
 	}
-
-	boundary := fmt.Sprintf("batch_%s", uuid.NewV1())
+	
+	uUID, err = uuid.NewV1()
+	if err != nil {
+		return err
+	}
+	boundary := fmt.Sprintf("batch_%s", uUID)
 	body, err := generateBody(changesetBody, changesetBoundary, boundary)
 	if err != nil {
 		return err
