@@ -1,16 +1,17 @@
-hash: f14a82a45c3bcc4694e50ddc5acb2a044ee38326e52c80ade5416f6ec2ae0fd4
-updated: 2017-03-30T12:41:17.2410565-07:00
+hash: b5b7103d37778b681553037bd40d828d3522d66d9e6b7eb40e24288aa725639e
+updated: 2018-01-10T18:46:45.006286-07:00
 imports:
 - name: github.com/Azure/go-autorest
-  version: 92e199ed6a4b8b81c5d7536915af3616c2cd9fff
+  version: 8c58b4788dedd95779efe0ac2055bb6a1b9b8e01
   subpackages:
   - autorest
+  - autorest/adal
   - autorest/azure
   - autorest/date
 - name: github.com/dgrijalva/jwt-go
-  version: 2268707a8f0843315e2004ee4f1d021dc08baedf
-- name: github.com/satori/uuid
-  version: 5bf94b69c6b68ee1b541973bb8e1144db23a194b
+  version: dbeaa9332f19a944acb5736b4456cfcc02140e29
+- name: github.com/satori/go.uuid
+  version: f58768cc1a7a7e77a3bd49e98cdd21419399b6a3
 testImports:
 - name: github.com/dnaeon/go-vcr
   version: 87d4990451a858cc210399285be976e63bc3c364
@@ -20,4 +21,4 @@ testImports:
 - name: gopkg.in/check.v1
   version: 20d25e2804050c1cd24a7eea1e7a6447dd0e74ec
 - name: gopkg.in/yaml.v2
-  version: a3f3340b5840cee44f372bddb5880fcbc419b46a
+  version: d670f9405373e636a5a2765eea47fac0c9bc91a4

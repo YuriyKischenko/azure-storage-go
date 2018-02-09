@@ -3,6 +3,7 @@ import:
 - package: github.com/Azure/go-autorest
   subpackages:
   - autorest/azure
-- package: github.com/satori/uuid
+- package: github.com/satori/go.uuid
+  version: ~1.2.0
 testImport:
 - package: gopkg.in/check.v1
